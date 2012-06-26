@@ -731,5 +731,5 @@ SyntaxHighlighter.brushes.AutoLISP = function()
 		{ regex: new RegExp(this.getKeywords(constants), 'gmi'),			css: 'color1' }
 	];
 };
-SyntaxHighlighter.brushes.Custom.prototype = new SyntaxHighlighter.Highlighter();
-SyntaxHighlighter.brushes.Custom.aliases = ['autolisp', 'lsp'];
+SyntaxHighlighter.brushes.AutoLISP.prototype = new SyntaxHighlighter.Highlighter();
+SyntaxHighlighter.brushes.AutoLISP.aliases = ['autolisp', 'lsp'];
