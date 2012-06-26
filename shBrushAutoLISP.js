@@ -1,8 +1,8 @@
-SyntaxHighlighter.brushes.AutoLISP = function()
+SyntaxHighlighter.brushes.autolisp = function()
 {
-	// Contributed by Aleksei Teplykh
+	/* Contributed by Aleksei Teplykh */
 	
-	var operators = '+ - * / = /= < <= > >= ~ 1+ 1-';
+	//var operators = '+ - * / = /= < <= > >= ~ 1+ 1-';
 	var symbols   =	':constants-prefix :methods-prefix :prog-id :properties-prefix :tlb-filename :vlax-false' +
 					':vlax-null :vlax-true :vlr-abortattach :vlr-abortdeepclone :vlr-abortdxfin :vlr-abortdxfout' +
 					':vlr-abortinsert :vlr-abortrestore :vlr-abortwblock :vlr-acdb-reactor :vlr-beginattach' +
@@ -723,13 +723,16 @@ SyntaxHighlighter.brushes.AutoLISP = function()
 					'_matts_util _ver _vl-balance-parenthesis _vl-fast-mode _vl-times _vlisp-version';
 				
 	this.regexList = [
-		{ regex: /;(.*)$/gm,												css: 'comments' },
-		{ regex: new RegExp(this.getKeywords(funcs), 'gmi'),				css: 'color2' },
-		{ regex: new RegExp(this.getKeywords(operators), 'gmi'),			css: 'color1' },
-		{ regex: new RegExp(this.getKeywords(globals), 'gmi'),				css: 'keyword' },
-		{ regex: new RegExp(this.getKeywords(symbols), 'gmi'),				css: 'color2' },
-		{ regex: new RegExp(this.getKeywords(constants), 'gmi'),			css: 'color1' }
+		{ regex: /;(.*)$/gm,										css: 'comments' },
+		{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,		css: 'string' },
+		{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		css: 'string' },				
+		{ regex: new RegExp(this.getKeywords(funcs), 'gmi'),		css: 'color2' },
+		//{ regex: new RegExp(this.getKeywords(operators), 'gmi'),	css: 'color1' },
+		{ regex: new RegExp(this.getKeywords(globals), 'gmi'),		css: 'keyword' },
+		{ regex: new RegExp(this.getKeywords(symbols), 'gmi'),		css: 'color2' },
+		{ regex: new RegExp(this.getKeywords(constants), 'gmi'),	css: 'color1' }
 	];
 };
-SyntaxHighlighter.brushes.AutoLISP.prototype = new SyntaxHighlighter.Highlighter();
-SyntaxHighlighter.brushes.AutoLISP.aliases = ['autolisp', 'lsp'];
+
+SyntaxHighlighter.brushes.autolisp.prototype = new SyntaxHighlighter.Highlighter();
+SyntaxHighlighter.brushes.autolisp.aliases = ['autolisp', 'lsp'];
