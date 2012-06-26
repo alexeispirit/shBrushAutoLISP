@@ -1,5 +1,6 @@
 SyntaxHighlighter.brushes.autolisp = function()
 {
+	alert("OK");
 	/* Contributed by Aleksei Teplykh */
 	
 	//var operators = '+ - * / = /= < <= > >= ~ 1+ 1-';
